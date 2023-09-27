@@ -12,7 +12,7 @@ env:
 
 jobs:
   tests:
-    name: Tests on PHP ${{ matrix.php }}
+    name: Tests on PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
@@ -22,6 +22,17 @@ jobs:
           - 8.0
           - 8.1
           - 8.2
+        symfony:
+          - 3.*
+          - 4.*
+          - 5.*
+          - 6.*
+        flags:
+          - --prefer-dist
+          - --prefer-dist --prefer-lowest
+        exclude:
+          - php: 7.4
+            symfony: 6.*
 
     steps:
       - name: Checkout
@@ -32,11 +43,14 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           coverage: none
+          tools: flex
 
       - name: Install dependencies
+        env:
+          SYMFONY_REQUIRE: ${{ matrix.symfony }}
         uses: ramsey/composer-install@v2
         with:
-            composer-options: --optimize-autoloader --no-interaction
+          composer-options: --optimize-autoloader --no-interaction ${{ matrix.flags }}
 
       - name: Run tests
         run: make tests
