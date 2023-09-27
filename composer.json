@@ -44,8 +44,6 @@
 
         "behat/behat": "^3.0",
 
-        "kphoen/rusty": "dev-master",
-
         "liip/rmt": "^1.2"
     },
     "suggest": {
