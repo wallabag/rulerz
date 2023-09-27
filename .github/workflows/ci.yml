@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - move-to-github-actions
 
 env:
   COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
