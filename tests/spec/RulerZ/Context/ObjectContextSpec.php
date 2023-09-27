@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace spec\RulerZ\Context;
 
+use PhpSpec\Exception\Example\FailureException;
 use PhpSpec\ObjectBehavior;
 use RulerZ\Context\ObjectContext;
 
@@ -38,8 +39,13 @@ class ObjectContextSpec extends ObjectBehavior
     {
         $object->property = 42;
 
-        $this->offsetExists('property')->shouldReturn(true);
-        $this->offsetExists('non_existent_property')->shouldReturn(false);
+        if ($this->offsetExists('property') !== true) {
+            throw new FailureException();
+        }
+
+        if ($this->offsetExists('non_existent_property') !== false) {
+            throw new FailureException();
+        }
     }
 
     public function it_forbids_setting_properties()
