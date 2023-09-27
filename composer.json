@@ -34,6 +34,7 @@
         "php": ">=7.4",
 
         "hoa/ruler": "^2.0",
+        "hoa/consistency": "^1.17.05.02",
         "symfony/property-access": "^3.0|^4.0|^5.0|^6.0"
     },
     "require-dev": {
