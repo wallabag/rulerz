@@ -16,20 +16,18 @@ class ParserSpec extends ObjectBehavior
         $this->shouldHaveType(Parser::class);
     }
 
-    /**
-     * @dataProvider validRules
-     */
-    public function it_returns_an_ast_for_a_valid_rule($rule)
+    public function it_returns_an_ast_for_a_valid_rule()
     {
-        $this->parse($rule)->shouldHaveType(Rule::class);
+        foreach ($this->validRules() as [$rule]) {
+            $this->parse($rule)->shouldHaveType(Rule::class);
+        }
     }
 
-    /**
-     * @dataProvider invalidRules
-     */
-    public function it_throws_an_exception_for_an_invalid_rule($rule)
+    public function it_throws_an_exception_for_an_invalid_rule()
     {
-        $this->shouldThrow(Exception::class)->duringParse($rule);
+        foreach ($this->invalidRules() as [$rule]) {
+            $this->shouldThrow(Exception::class)->duringParse($rule);
+        }
     }
 
     public function validRules()
