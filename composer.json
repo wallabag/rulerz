@@ -43,7 +43,7 @@
         "mikey179/vfsstream": "^1.6.7",
         "phpspec/phpspec": "^7.3",
 
-        "behat/behat": "^3.0",
+        "behat/behat": "^3.7",
 
         "liip/rmt": "^1.2"
     },
