@@ -46,6 +46,9 @@
 
         "liip/rmt": "^1.2"
     },
+    "replace": {
+        "kphoen/rulerz": "*"
+    },
     "suggest": {
         "kphoen/rulerz-spec-builder": "If you want a specification builder",
         "rulerz-php/eloquent": "To execute rules against Eloquent targets",
