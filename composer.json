@@ -40,7 +40,7 @@
         "ext-json": "*",
 
         "mikey179/vfsstream": "~1.4",
-        "phpspec/phpspec": "~2.0,>=2.4@dev",
+        "phpspec/phpspec": "~4.0",
 
         "behat/behat": "~3.0",
 
