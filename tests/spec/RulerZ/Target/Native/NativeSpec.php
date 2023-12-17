@@ -32,12 +32,11 @@ class NativeSpec extends ObjectBehavior
         $this->supports([], CompilationTarget::MODE_SATISFIES)->shouldReturn(true);
     }
 
-    /**
-     * @dataProvider unsupportedTypes
-     */
-    public function it_can_not_filter_other_types($type)
+    public function it_can_not_filter_other_types()
     {
-        $this->supports($type, CompilationTarget::MODE_FILTER)->shouldReturn(false);
+        foreach ($this->unsupportedTypes() as $type) {
+            $this->supports($type, CompilationTarget::MODE_FILTER)->shouldReturn(false);
+        }
     }
 
     public function unsupportedTypes(): array
