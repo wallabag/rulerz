@@ -29,8 +29,8 @@ class ExecutionContextSpec extends ObjectBehavior
 
     public function it_allows_testing_property_existence($object)
     {
-        $this->offsetExists('some')->shouldReturn(true);
-        $this->offsetExists('non_existent_offset')->shouldReturn(false);
+        $this->shouldHaveKey('some');
+        $this->shouldNotHaveKey('non_existent_offset');
     }
 
     public function it_forbids_setting_properties()
