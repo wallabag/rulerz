@@ -1,8 +1,8 @@
 {
-    "name": "kphoen/rulerz",
+    "name": "wallabag/rulerz",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/K-Phoen/RulerZ",
+    "homepage": "https://github.com/wallabag/rulerz",
     "description": "Powerful implementation of the Specification pattern",
     "keywords": ["specification", "doctrine"],
     "authors": [

@@ -7,7 +7,7 @@ The recommended way to install this library is with [Composer](http://getcompose
 
 ```
 # ignore
-composer require 'kphoen/rulerz'
+composer require wallabag/rulerz
 ```
 
 ## Usage
