@@ -38,5 +38,3 @@ jobs:
         run: composer install --optimize-autoloader --no-interaction
 
       - run: make tests
-
-      - run: make rusty

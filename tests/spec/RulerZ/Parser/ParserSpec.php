@@ -64,6 +64,7 @@ class ParserSpec extends ObjectBehavior
             '> 30',
             'name[0] = "a"',
             'name.foo() = "a"',
+            'foo = ',
         ];
     }
 
