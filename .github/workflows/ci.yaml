@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         php: [7.2, 7.3, 7.4, 8.0, 8.1, 8.2]
+        composer-flags: ['', '--prefer-lowest']
       fail-fast: true
     steps:
       - uses: actions/checkout@v4
@@ -35,6 +36,6 @@ jobs:
           restore-keys: ${{ runner.os }}-composer-
 
       - name: Install dependencies
-        run: composer update --prefer-dist --no-interaction
+        run: composer update --prefer-dist --no-interaction ${{ matrix.composer-flags }}
 
       - run: make tests
