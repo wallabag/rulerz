@@ -35,6 +35,6 @@ jobs:
           restore-keys: ${{ runner.os }}-composer-
 
       - name: Install dependencies
-        run: composer install --optimize-autoloader --no-interaction
+        run: composer update --prefer-dist --no-interaction
 
       - run: make tests
