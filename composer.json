@@ -35,7 +35,7 @@
 
         "hoa/ruler": "~2.0",
         "hoa/consistency": "^1.17.05",
-        "symfony/property-access": "^4.4|^5.4"
+        "symfony/property-access": "^4.4|^5.4|^6.4"
     },
     "require-dev": {
         "ext-json": "*",
