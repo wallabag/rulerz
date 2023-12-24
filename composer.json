@@ -31,7 +31,7 @@
         "bin-dir": "bin/"
     },
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.4",
 
         "hoa/ruler": "~2.0",
         "hoa/consistency": "^1.17.05",
@@ -41,7 +41,7 @@
         "ext-json": "*",
 
         "mikey179/vfsstream": "^1.6.7",
-        "phpspec/phpspec": "^6.1.1|^7.0",
+        "phpspec/phpspec": "^7.0",
 
         "behat/behat": "~3.0",
 
